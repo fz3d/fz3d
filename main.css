@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: arial,helvetica,sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    background-image: url("noise.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h2 {
+    text-align: center;
+    letter-spacing: 3px;
+    font-variant: small-caps;
+    margin: 5% 0 0 0;
+    font-family: 'Zilla Slab Highlight', cursive;
+    font-size: 200%;
+}
+
+section {
+    position: relative;
+    height: 100px;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(100% 0,100% 67%,0 100%, 0 0);
+}
+
+
+
+#kontener {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#fejlec {
+    letter-spacing: 3px;
+    font-variant: small-caps;
+    font-size: 150%;
+}
+
+#menu {
+    margin: auto;
+    width: 60%;
+    transform: skewY(-3deg);
+}
+
+#menu ul li {
+    list-style-type: none;
+    display: inline;
+    
+}
+
+#menu li a {
+    display: inline;
+    text-decoration: none;
+    padding: 4px;
+    border-left: 3px dotted #FFFFFF;
+    color: #FFFFFF;
+    font-family: 'Zilla Slab Highlight', cursive;
+    letter-spacing: 2px;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: letter-spacing 0.5s;
+    transition-timing-function: ease;
+}
+
+#menu li a:hover {
+    background-color: red;
+    letter-spacing: 4px;
+}
+
+#fokontener {
+    margin: auto;
+    width: 60%;
+}
+
+#tartalom {
+    text-align: justify;
+    line-height: 1.6;
+    margin: 12px;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+#lablec {
+    font-family: 'Archivo Black', sans-serif;
+    position: relative;
+    height: 100px;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(100% 0,100% 100%,0% 100%,0 33%);
+}
+
+@media only screen and (max-width: 800px) {
+    #menu {
+    width: 100%;
+    }
+    #fokontener {
+    width: 100%;
+    }
+}
