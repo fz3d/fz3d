@@ -7,19 +7,33 @@
     <meta name="author" content="Fáth Zoltán">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>FZ3D - kezdőoldal</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
-    
+	<link rel="stylesheet" type="text/css" href="dark.css" id="css-alap">
 </head>
 <body>
-	<script>
-		//
-    </script>
     <div id="kontener">
         <section>
         <div id="fejlec">
-            <img width="192" alt="FZ3D logo" src="logo.svg">
+            <img width="192" alt="FZ3D logo" src="logo2.svg">
+            <img width="92" alt="dark mode" src="dark.svg" class="darklight">
         </div>
         </section>
+        <script>
+		const kep = document.querySelector(".darklight");
+        const tema = document.querySelector("#css-alap");
+        
+        kep.addEventListener("click", function() {
+            if (tema.getAttribute("href") == "dark.css") {
+                tema.href = "light.css";
+            } else {
+                tema.href = "dark.css";
+            }
+            if (kep.getAttribute("src") == "dark.svg") {
+                kep.src = "light.svg";
+            } else {
+                kep.src = "dark.svg";
+            }
+        });
+        </script>
         <div id="menu">
             <ul>
                 <li><a href="index.html">Kezdőlap</a>
@@ -33,7 +47,7 @@
                 <p>Köszöntelek weboldalamon! </p>
                 <p>Fáth Zoltán vagyok, amatőr 2D/3D-grafikus, animációkészítő.
                 2005 óta foglalkozom 3D grafikával heti-havi rendszerességgel, teljesen autodidakta módon kezdtem el tanulni az alapokat.
-                Mindig is műszaki beállítottságú ember voltam, de legalább olyan erősen jelen van az életemben az önkifejezés, a művészet szeretete is.
+                Mindig is műszaki beállítottságú voltam, de ugyanilyen erősen jelen van az életemben az önkifejezés, a művészet szeretete is.
                 Az informatika széles és változatos eszköztára szerencsére mindkét oldal bemutatására lehetőséget kínál.</p>
                 <p>A Blender szoftvert választottam (pontosabban annak idején egy jó barátom ajánlotta),
                 mert ingyen hozzáférhető, és miután elkezdtem használni, azonnal megtetszett a mögötte álló lelkes közösség,
@@ -53,9 +67,14 @@
                 Tulajdonképpen ezt a weboldalt egy bemutatkozó oldalnak szánom, amit szintén magam raktam össze a nulláról, kód szinten.
                 Sokat gondolkodtam rajta, hogy kell-e nekem egyáltalán saját weboldal, felnőttem-e kellőképpen a feladathoz, aztán
                 arra jutottam, hogy egyrészt nem az én feladatom ezt eldönteni, másrészt valahol el kell kezdeni, bele kell vágni, meg kell mutatni!
-                Azt pedig a Kedves Látogató műértő (vagy nem műértő, de kíváncsi) szemére bízom, hogy megérte-e, vagy sem!
+                Azt pedig a Kedves műértő (vagy nem műértő, de kíváncsi) Látogatóra bízom, hogy megérte-e, vagy sem!
                 </p>
             </div>
+        </div>
+        <div id="latogatok">
+            <a href='https://www.symptoma.hu/hu/info/covid-19#info'>SARS-CoV-2</a>
+            <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=a4510c836cace774ff16c583cd1104fdd0d9d235'></script>
+            Eddigi látogatók:<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/822638/t/5"></script>
         </div>
         <div id="lablec">
             <p>&copy; FZ3D - 2021</p>

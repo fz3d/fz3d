@@ -7,19 +7,33 @@
     <meta name="author" content="Fáth Zoltán">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>FZ3D - Munkáim</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
-    
+	<link rel="stylesheet" type="text/css" href="dark.css" id="css-alap">    
 </head>
 <body>
-	<script>
-		//
-    </script>
-    <div id="kontener">
+	<div id="kontener">
         <section>
         <div id="fejlec">
-            <img width="192" alt="FZ3D logo" src="logo.svg">
+            <img width="192" alt="FZ3D logo" src="logo2.svg">
+            <img width="92" alt="dark mode" src="dark.svg" class="darklight">
         </div>
         </section>
+        <script>
+		const kep = document.querySelector(".darklight");
+        const tema = document.querySelector("#css-alap");
+        
+        kep.addEventListener("click", function() {
+            if (tema.getAttribute("href") == "dark.css") {
+                tema.href = "light.css";
+            } else {
+                tema.href = "dark.css";
+            }
+            if (kep.getAttribute("src") == "dark.svg") {
+                kep.src = "light.svg";
+            } else {
+                kep.src = "dark.svg";
+            }
+        });
+        </script>
         <div id="menu">
             <ul>
                 <li><a href="index.html">Kezdőlap</a>
