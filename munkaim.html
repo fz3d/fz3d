@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hu">		
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FZ3D - bemutatkozás">
+    <meta name="keywords" content="3D, 3D grafika, 3D animáció, animációk, portfólió, FZ3D">
+    <meta name="author" content="Fáth Zoltán">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FZ3D - Munkáim</title>
+	<link rel="stylesheet" type="text/css" href="dark.css" id="css-alap">    
+</head>
+<body>
+	<div id="kontener">
+        <section>
+        <div id="fejlec">
+            <img width="192" alt="FZ3D logo" src="logo2.svg">
+            <img width="92" alt="dark mode" src="dark.svg" class="darklight">
+        </div>
+        </section>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html">Kezdőlap</a>
+                <li><a href="munkaim.html">Munkáim</a>
+                <li><a href="kontakt.html">Kontakt</a>
+            </ul>
+        </div>
+        <div id="fokontener2">
+            <div id="tartalom">
+                <h1>Munkáim</h1>
+                
+                <p class="kategoria">3D fraktálgrafikák</p>
+                <script>
+                    for (i=1; i<10; ++i) {
+                        if (i<10) {
+                            document.getElementById("tartalom").innerHTML += "<div class='reszponziv render'><a target='_self' href='fraktal/00"+i+"_original.jpg'><img src='fraktal/fraktal00"+i+".jpg'></a></div>";
+                        }
+                        if (i>=10 && i<100) {
+                            document.getElementById("tartalom").innerHTML += "<div class='reszponziv render'><a target='_self' href='fraktal/0"+i+"_original.jpg'><img src='fraktal/fraktal0"+i+".jpg'></a></div>";
+                        }
+                    }
+                </script>
+                <div class="clearfix"></div>
+                
+                <p class="kategoria">Járművek (tervrajzok alapján modellezve)</p>
+                <script>
+                    for (i=1; i<7; ++i) {
+                        if (i<10) {
+                            document.getElementById("tartalom").innerHTML += "<div class='reszponziv render'><a target='_self' href='jarmuvek/00"+i+"_original.jpg'><img src='jarmuvek/jarmuvek00"+i+".jpg'></a></div>";
+                        }
+                        if (i>=10 && i<100) {
+                            document.getElementById("tartalom").innerHTML += "<div class='reszponziv render'><a target='_self' href='jarmuvek/0"+i+"_original.jpg'><img src='jarmuvek/jarmuvek0"+i+".jpg'></a></div>";
+                        }
+                    }
+                </script>
+                <div class="clearfix"></div>
+                
+                <p class="kategoria">Az elmúlt 7-8 év munkái vegyesen</p>
+                <script>
+                    for (i=1; i<54; ++i) {
+                        if (i<10) {
+                            document.getElementById("tartalom").innerHTML += "<div class='reszponziv render'><a target='_self' href='kepek/00"+i+"_original.jpg'><img src='kepek/kepek00"+i+".jpg'></a></div>";
+                        }
+                        if (i>=10 && i<100) {
+                            document.getElementById("tartalom").innerHTML += "<div class='reszponziv render'><a target='_self' href='kepek/0"+i+"_original.jpg'><img src='kepek/kepek0"+i+".jpg'></a></div>";
+                        }
+                    }
+                </script>
+                <div class="clearfix"></div>
+                
+                <p class="kategoria">Egyéb (photogrammetry, 3D-print, 3D-szemüvegen át nézhető képek, Unreal Engine 4 és mindenféle kísérletek jönnek majd ide :) )</p>
+                <script>
+                    for (i=1; i<7; ++i) {
+                        if (i<10) {
+                            document.getElementById("tartalom").innerHTML += "<div class='reszponziv render'><a target='_self' href='3d/00"+i+"_original.jpg'><img src='3d/3D00"+i+".jpg'></a></div>";
+                        }
+                        if (i>=10 && i<100) {
+                            document.getElementById("tartalom").innerHTML += "<div class='reszponziv render'><a target='_self' href='3d/0"+i+"_original.jpg'><img src='3d/3D0"+i+".jpg'></a></div>";
+                        }
+                    }
+                </script>
+                <div class="clearfix"></div>
+                
+                <p class="kategoria">Stúdiónapló 1. rész</p>
+                    <video class="render" id="vidi" width="480" height="480" controls loop autoplay>
+                        <source src="studio01.mp4" type="video/mp4">
+                    </video>
+            </div>
+        </div>
+        <div id="lablec2">
+            <p id="fz3d">
+                <script>
+                    var datum = new Date();
+                    const kep = document.querySelector(".darklight");
+                    const tema = document.querySelector("#css-alap");
+        
+                    kep.addEventListener("click", function() {
+                        if (tema.getAttribute("href")=="dark.css") {
+                            tema.href="light.css";
+                        } else {
+                            tema.href="dark.css";
+                        }
+                        if (kep.getAttribute("src")=="dark.svg") {
+                            kep.src="light.svg";
+                        } else {
+                            kep.src="dark.svg";
+                        }
+                    });
+                    document.getElementById("fz3d").innerHTML = "&copy; FZ3D - "+datum.getFullYear();
+                </script>
+            </p>
+            <p id="copyright">A munkáim során esetenként felhasznált ingyenes modellek és textúrák elérhetősége:<br>blenderkit.com - texturehaven.com - modelhaven.com - hdrihaven.com - textures.com - 3dtextures.me - freepbr.com - gametextures.com - sharetextures.com - texturebox.com - cgbookcase.com - cgtrader.com - sketchfab.com - free3d.com - turbosquid.com - artec3d.com - cc0textures.com - mixamo.com - renderpeople.com - poliigon.com - rd-textures.com - unrealengine.com - cgmood.com
+            </p>
+        </div>
+    </div>
+</body>
+</html>

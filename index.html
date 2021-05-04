@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hu">		
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FZ3D - bemutatkozás">
+    <meta name="keywords" content="3D, 3D grafika, 3D animáció, animációk, portfólió, FZ3D">
+    <meta name="author" content="Fáth Zoltán">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FZ3D - kezdőoldal</title>
+	<link rel="stylesheet" type="text/css" href="dark.css" id="css-alap">
+</head>
+<body>
+    <div id="kontener">
+        <section>
+        <div id="fejlec">
+            <img width="192" alt="FZ3D logo" src="logo2.svg">
+            <img width="92" alt="dark mode" src="dark.svg" class="darklight">
+        </div>
+        </section>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html">Kezdőlap</a>
+                <li><a href="munkaim.html">Munkáim</a>
+                <li><a href="kontakt.html">Kontakt</a>
+            </ul>
+        </div>
+        <div id="fokontener">
+            <div id="tartalom">
+                <h1>Bemutatkozás</h1>
+                <p class="kategoria">Köszöntelek weboldalamon! </p>
+                <p>Fáth Zoltán vagyok, amatőr 2D/3D-grafikus, animációkészítő.
+                2005 óta foglalkozom 3D grafikával heti-havi rendszerességgel, teljesen autodidakta módon kezdtem el tanulni az alapokat.
+                Mindig is műszaki beállítottságú voltam, de ugyanilyen erősen jelen van az életemben az önkifejezés, a művészet szeretete is.
+                Az informatika széles és változatos eszköztára szerencsére mindkét oldal bemutatására lehetőséget kínál.
+                </p>
+                <p>A Blender szoftvert választottam (pontosabban annak idején egy jó barátom ajánlotta),
+                mert ingyen hozzáférhető, és miután elkezdtem használni, azonnal megtetszett a mögötte álló lelkes közösség,
+                akik különféle technikai tippekkel, trükkökkel, magas szintű, önzetlen tudás-transzferrel fáradhatatlanul
+                segítik és inspirálják felhasználók millióit, kezdőktől a profikig világszerte.
+                Az elmúlt 16 év alatt látványos fejlődésen ment keresztül a program, szinte rá sem lehet már ismerni, honnan is indult.
+                Ma már nem is érzem szükségét, hogy más szoftverre váltsak. Kicsit irigylem is azokat, akik most kezdik el, hiszen a számtalan Blender-kiegészítővel
+                (addon-nal) a program alapfunkciói "felokosíthatók" olyan szintre, hogy gyakorlatilag túlzás nélkül állíthatom:
+                versenyképes otthoni mini alkotóstúdiót varázsol egy erősebb számítógépből. És ehhez jönnek hozzá azok a külső, szintén open-source szoftverek,
+                amik nagyon jól használhatók és remekül integrálhatók különböző munkafolyamatokba, tovább bővítve az amúgy is korlátlannak tűnő lehetőségeket
+                (hogy csak néhányat említsek: GIMP, Inkscape, Unreal Engine, MeshRoom, Adobe Mixamo, Mandelbulber, Tree It, MakeHuman, JSplacement, InstantMeshes...)
+                </p>
+                <img id="fo_graf" class="render" src="fz3d.jpg" alt="FZ3D grafika">
+                <p>Ezidáig több ezer (ha nem tízezer!) órát töltöttem a programmal, rengeteget kísérleteztem, fejlődtem, és
+                talán az itt bemutatott munkáimon is látszik, hogy szinte minden részterületébe belekóstoltam a 3D-nek, mondhatni megismertem
+                azt a szövevényes eszköztárat, ami immáron alkalmassá tesz arra, hogy egy adott probléma megoldásához megfelelő és hatékony módszereket
+                válasszak. Ez alsó hangon is több évnyi tanulást igényel, és a főállásom mellett (informatika tanár vagyok)
+                rengeteg energiát és türelmet igényelt, hogy eljussak arra a szintre, ahol jelenleg tartok.
+                Tulajdonképpen ezt a weboldalt egy bemutatkozó oldalnak szánom, amit szintén magam raktam össze a nulláról, kód szinten.
+                Sokat gondolkodtam rajta, hogy kell-e nekem egyáltalán saját weboldal, felnőttem-e kellőképpen a feladathoz, aztán
+                arra jutottam, hogy egyrészt nem az én feladatom ezt eldönteni, másrészt valahol el kell kezdeni, bele kell vágni, meg kell mutatni!
+                Azt pedig a Kedves műértő (vagy nem műértő, de kíváncsi) Látogatóra bízom, hogy megérte-e, vagy sem!
+                </p>
+            </div>
+        </div>
+        <div id="latogatok">
+            <a href='https://www.symptoma.hu/hu/info/covid-19#info'>SARS-CoV-2</a>
+            <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=a4510c836cace774ff16c583cd1104fdd0d9d235'></script>
+            Eddigi látogatók:<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/822638/t/5"></script>
+        </div>
+        <div id="lablec">
+            <p>
+            <script>
+            var datum = new Date();
+            const kep = document.querySelector(".darklight");
+            const tema = document.querySelector("#css-alap");
+        
+            kep.addEventListener("click", function() {
+                if (tema.getAttribute("href") == "dark.css") {
+                    tema.href = "light.css";
+                } else {
+                    tema.href = "dark.css";
+                }
+                if (kep.getAttribute("src") == "dark.svg") {
+                    kep.src = "light.svg";
+                } else {
+                    kep.src = "dark.svg";
+                }
+            });
+            document.getElementById("lablec").innerHTML = "&copy; FZ3D - "+datum.getFullYear();
+            </script>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
